@@ -1,0 +1,3 @@
+<ng-container *ngIf="word">
+    <app-word-tile #tiles (onEmptyLetterDelete)="onEmptyLetterDelete(i)" (onLetterSet)="onLetterSet(i)" *ngFor="let i of range(wordLength)" [letter]="letterAt(i)" [tileState]="tileStateAt(i)"></app-word-tile>
+</ng-container>

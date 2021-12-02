@@ -1,0 +1,13 @@
+<div>
+    <app-word-row #wordRows 
+        *ngFor="let item of [].constructor(6); let i = index" 
+        [word]="currentWord" 
+        [rowState]="getRowState(i)" 
+        (onRowComplete)="onRowCompleted()"></app-word-row>
+
+    <app-word-row style="margin-top:5px;" *ngIf="showSolutionRow" #completeRow 
+        [word]="currentWord" 
+        [guessedWord]="currentWord"
+        [rowState]="RowState.Finished"></app-word-row>
+</div>
+<app-complete-dialog (nextRoundClick)="onNextClicked()" [roundScores]="roundScores" *ngIf="_showCompleteDialog"></app-complete-dialog>

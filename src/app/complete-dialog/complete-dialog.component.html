@@ -1,0 +1,18 @@
+<div id="content">
+    <table>
+        <tr>
+            <th>Round</th>
+            <th>Score</th>
+        </tr>
+        <tr *ngFor="let score of roundScores;let i=index;">
+            <td>{{i + 1}}</td>
+            <td>{{score ?? '-'}}</td>
+        </tr>
+        <tr>
+            <td>Total:</td>
+            <td>{{totalScore()}}</td>
+        </tr>
+    </table>
+    <button (click)="nextRound()" *ngIf="!isFull()">Next Round</button>
+    <button (click)="home()" *ngIf="isFull()">Home</button>
+</div>

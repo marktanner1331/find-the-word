@@ -1,0 +1,7 @@
+<span *ngIf="tileState != TileState.Input"
+    [class.hidden]="tileState == TileState.Hidden"
+    [class.correct]="tileState == TileState.Correct"
+    [class.wrong]="tileState == TileState.Wrong"
+    [class.warm]="tileState == TileState.Warm"
+>{{letter}}</span>
+<span #inputSpan class="input" contenteditable="true" (keydown)="onKeyDown($event)" (keyup)="onKeyUp($event)" *ngIf="tileState == TileState.Input"></span>

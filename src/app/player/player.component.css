@@ -1,0 +1,9 @@
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+app-word-row {
+    margin-bottom: 10px;
+}
