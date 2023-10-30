@@ -20,4 +20,8 @@ export class HomeComponent implements OnInit {
   on5Click() {
     this.router.navigateByUrl("player?word_length=5");
   }
+
+  on6Click() {
+    this.router.navigateByUrl("player?word_length=6");
+  }
 }

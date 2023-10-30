@@ -20,7 +20,8 @@ export class WordRowComponent implements OnInit {
 
   private _range: { [key: number]: number[] } = {
     4: [0, 1, 2, 3],
-    5: [0, 1, 2, 3, 4]
+    5: [0, 1, 2, 3, 4],
+    6: [0, 1, 2, 3, 4, 5]
   };
 
   constructor() {
